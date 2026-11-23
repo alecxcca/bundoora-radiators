@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bundoora Radiator Service</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://alecxcca.github.io/bundoora-radiators/">
+<meta property="og:url" content="https://alecxcca.github.io/bundoora-radiators/">
+<meta name="description" content="Bundoora Radiator Service, Heidelberg West VIC. Radiator repairs and replacements, heater cores and cooling systems for everyday, classic and modified vehicles. Call (03) 9459 3447.">
+<meta name="theme-color" content="#14191d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bundoora Radiator Service · Heidelberg West">
+<meta property="og:description" content="Radiators, heater cores and cooling systems. 9 Beatrice Ave, Heidelberg West VIC 3081 · (03) 9459 3447">
+<meta property="og:image" content="https://alecxcca.github.io/bundoora-radiators/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314191d'/%3E%3Crect x='10' y='10' width='44' height='8' rx='2' fill='%23c8763a'/%3E%3Crect x='10' y='46' width='44' height='8' rx='2' fill='%23c8763a'/%3E%3Cg stroke='%2381b9c4' stroke-width='3'%3E%3Cpath d='M16 20v24M24 20v24M32 20v24M40 20v24M48 20v24'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AutoRepair","name":"Bundoora Radiator Service","telephone":"+61394593447",
+"address":{"@type":"PostalAddress","streetAddress":"9 Beatrice Ave","addressLocality":"Heidelberg West","addressRegion":"VIC","postalCode":"3081","addressCountry":"AU"},
+"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:30","closes":"12:00"}],
+"paymentAccepted":"Credit card, Debit card, NFC mobile payments"}
+</script>
+<style>
+/* Layout: a radiator in cross-section. Copper header tank on top (nav), a core of fins (hero), coolant flowing down through the sections, copper tank again at the base (footer). */
+:root{
+  --iron:#14191d;        /* engine-block gunmetal, page ground */
+  --iron-2:#1c2328;      /* raised surfaces */
+  --fin:#2a343b;         /* radiator fin lines */
+  --copper:#c8763a;      /* brass/copper header tanks, accent */
+  --copper-hi:#e59a5c;
+  --coolant:#81b9c4;     /* coolant, secondary accent */
+  --paper:#ece6dc;       /* job-card stock for light sections */
+  --ink:#1b1f22;
+  --muted:#8b979e;
+  --text:#e9edef;
+  --display:"Big Shoulders Display","Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --gut:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--iron);color:var(--text);font:400 17px/1.6 var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coolant);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:.95;margin:0;letter-spacing:.01em}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--copper)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--iron)}
+
+/* NAV — header tank */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--iron) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--fin)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand b{font:800 20px/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.brand small{display:block;font:500 10px/1.2 var(--mono);letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-top:3px}
+.nav nav{display:flex;gap:22px;font:500 14px/1 var(--body)}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:6px;font:600 15px/1 var(--body);text-decoration:none;transition:transform .2s ease,background .2s ease,box-shadow .2s ease;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-copper{background:var(--copper);color:#1a0f07;box-shadow:0 0 0 0 rgba(200,118,58,.0)}
+.btn-copper:hover{background:var(--copper-hi);transform:translateY(-2px);box-shadow:0 10px 30px -10px rgba(229,154,92,.7)}
+.btn-quote{background:var(--coolant);color:#0d1a1d}
+.btn-quote:hover{background:#a3d3dc;transform:translateY(-2px);box-shadow:0 10px 30px -10px rgba(129,185,196,.7)}
+.navcta{display:flex;gap:8px}
+@media (max-width:640px){.navcta .btn-quote{display:none}}
+.btn-ghost{border:1px solid #3a464e;color:var(--text)}
+.btn-ghost:hover{border-color:var(--coolant);transform:translateY(-2px)}
+.nav .btn{padding:10px 14px;font-size:14px}
+@media (max-width:760px){.nav nav{display:none}.brand small{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;isolation:isolate;min-height:min(92vh,860px);display:flex;align-items:center}
+.layer{position:absolute;inset:-12% 0 -12% 0;will-change:transform;pointer-events:none}
+.layer svg,.layer canvas{width:100%;height:100%;display:block}
+.l-back{z-index:-3}
+.l-mid{z-index:-2}
+.l-front{z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(80% 60% at 20% 55%,rgba(20,25,29,.92) 0%,rgba(20,25,29,.55) 55%,rgba(20,25,29,0) 100%),
+  linear-gradient(180deg,rgba(20,25,29,0) 60%,var(--iron) 100%)}
+.hero-inner{position:relative;padding-block:clamp(64px,12vh,140px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:48px;align-items:center;width:100%}
+.hero h1{font-size:clamp(56px,10.5vw,138px);font-weight:900;text-transform:uppercase;letter-spacing:-.005em}
+.hero h1 .c{color:var(--copper);display:block}
+.hero h1 .s{display:block;-webkit-text-stroke:1.5px var(--text);color:transparent}
+.hero .lede{font-size:clamp(17px,1.6vw,20px);max-width:34em;color:#c6cfd3;margin:24px 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .meta{margin-top:28px;font:400 13px/1.5 var(--mono);color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+.status{display:inline-flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.status.open .dot{background:#7ccf8e;box-shadow:0 0 0 4px rgba(124,207,142,.18);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(124,207,142,0)}}
+
+/* Gauge */
+.gauge{justify-self:end;width:min(100%,340px);aspect-ratio:1;max-width:100%;position:relative}
+.gauge svg{width:100%;height:100%;overflow:visible}
+.gauge .needle{transform-origin:150px 170px;transition:transform .25s linear}
+.gauge-cap{position:absolute;left:0;right:0;bottom:6%;text-align:center;font:600 11px/1.4 var(--mono);letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+@media (max-width:860px){.hero-inner{grid-template-columns:1fr}.gauge{justify-self:start;width:220px;order:-1;margin-bottom:-12px}}
+@media (max-width:860px){.gauge{display:none}}
+
+/* Entrance */
+.rise{animation:rise .9s cubic-bezier(.2,.7,.1,1) both}
+.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.18s}.rise.d3{animation-delay:.3s}.rise.d4{animation-delay:.42s}
+@keyframes rise{from{transform:translateY(24px);opacity:.001}to{transform:none;opacity:1}}
+
+/* Coolant line marquee */
+.ticker{border-block:1px solid var(--fin);background:var(--iron-2);overflow:hidden}
+.ticker-track{display:flex;gap:48px;padding-block:14px;width:max-content;animation:flow 38s linear infinite;font:600 13px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.ticker-track span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--coolant);margin-right:14px;vertical-align:middle}
+@keyframes flow{to{transform:translateX(-50%)}}
+
+/* Sections */
+section{position:relative}
+.sec{padding-block:clamp(72px,11vw,140px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:56px}
+.sec-head h2{font-size:clamp(44px,6.5vw,88px);font-weight:800;text-transform:uppercase}
+.sec-head p{color:var(--muted);max-width:36em;margin:0}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:16px;margin-bottom:36px}}
+
+/* About */
+.about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.about-art{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:4px;overflow:hidden;background:var(--iron-2);border:1px solid var(--fin)}
+.about-art .p{position:absolute;inset:-3% 0;will-change:transform}
+.about-art svg{width:100%;height:100%;display:block}
+.dg-t{font:800 22px/1 var(--display);letter-spacing:.06em;fill:var(--text)}
+.dg-s{font:400 11px/1 var(--mono);fill:var(--muted)}
+.dg-l{font:600 10px/1 var(--mono);letter-spacing:.14em;fill:#c6cfd3}
+.flow{stroke-dasharray:3 13;animation:dash 1.4s linear infinite}
+.flow.core{stroke-dasharray:2 18;animation-duration:2.2s}
+@keyframes dash{to{stroke-dashoffset:-32}}
+.fan{animation:spin 3s linear infinite;transform-origin:0 0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.glow{animation:glow 2.6s ease-in-out infinite}
+@keyframes glow{50%{opacity:.6}}
+.about-copy h2{font-size:clamp(40px,5.4vw,72px);font-weight:800;text-transform:uppercase;margin:14px 0 24px}
+.about-copy p{color:#c6cfd3;max-width:34em;margin:0 0 18px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--fin);border:1px solid var(--fin);margin-top:32px}
+.facts div{background:var(--iron);padding:18px}
+.facts dt{font:600 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:8px}
+.facts dd{margin:0;font-size:15px}
+@media (max-width:860px){.about{grid-template-columns:1fr}.about-art{aspect-ratio:5/7;max-width:460px;width:100%;justify-self:center}}
+
+/* Services — job card stock */
+.services{background:var(--paper);color:var(--ink);overflow:hidden}
+.services .sec-head p{color:#5b6266}
+.services .eyebrow{color:#9a5220}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
+.svc article{padding:28px 28px 34px 0;border-bottom:1px solid #c9c0b2;position:relative;transition:background .25s ease}
+.svc article:not(:nth-child(3n+1)){padding-left:28px;border-left:1px solid #c9c0b2}
+.svc .code{font:600 12px/1 var(--mono);letter-spacing:.14em;color:#9a5220}
+.svc h3{font-size:30px;font-weight:800;text-transform:uppercase;margin:14px 0 10px}
+.svc p{margin:0;color:#4a5054;font-size:16px}
+.svc article::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.svc article:hover::after{transform:scaleX(1)}
+@media (max-width:900px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}.svc article,.svc article:not(:nth-child(3n+1)){padding:24px 20px 28px 0;border-left:0}.svc article:nth-child(2n){padding-left:20px;border-left:1px solid #c9c0b2}}
+@media (max-width:560px){.svc{grid-template-columns:1fr}.svc article:nth-child(2n){padding-left:0;border-left:0}}
+.services .finband{position:absolute;right:-4%;top:0;width:44%;height:100%;opacity:.5;pointer-events:none;will-change:transform}
+.services .wrap{position:relative}
+.makes{margin-top:44px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.makes b{font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;margin-right:8px}
+.makes span{font:500 14px/1 var(--body);padding:8px 12px;border:1px solid #b9ae9e;border-radius:999px}
+
+/* Quote — a job card that fills like a coolant gauge */
+.quote-sec{background:linear-gradient(180deg,var(--iron) 0%,#11161a 100%);border-top:1px solid var(--fin)}
+.qwrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,72px);align-items:start}
+.qintro h2{font-size:clamp(44px,6vw,80px);font-weight:800;text-transform:uppercase;margin:14px 0 20px}
+.qintro p{color:#c6cfd3;max-width:30em;margin:0 0 16px}
+.qintro ul{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font:400 14px/1.4 var(--mono);color:var(--muted)}
+.qintro li{display:flex;gap:10px;align-items:baseline}
+.qintro li b{color:var(--copper);font-weight:600;min-width:2.2em}
+.qcard{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 84px);background:var(--iron-2);border:1px solid var(--fin);border-radius:6px;overflow:hidden;min-width:0}
+.qtank{height:10px;background:#0e1214;position:relative}
+.qfill{position:absolute;inset:0 auto 0 0;width:25%;background:linear-gradient(90deg,var(--coolant),var(--copper));transition:width .5s cubic-bezier(.2,.7,.1,1)}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px clamp(20px,3vw,32px) 0;font:600 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.qhead .stepname{color:var(--copper)}
+.qbody{padding:18px clamp(20px,3vw,32px) clamp(22px,3vw,32px)}
+.qstep{display:none;border:0;margin:0;padding:0;min-width:0}
+.qstep.on{display:block;animation:qin .35s ease both}
+@keyframes qin{from{opacity:.001;transform:translateX(18px)}to{opacity:1;transform:none}}
+.qstep legend{font:800 clamp(28px,3vw,36px)/1 var(--display);text-transform:uppercase;padding:0;margin:0 0 6px}
+.qstep .hint{color:var(--muted);font-size:15px;margin:0 0 20px}
+.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt label{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid #36424a;border-radius:6px;cursor:pointer;transition:border-color .2s,background .2s,transform .15s;height:100%}
+.opt label b{font:600 16px/1.25 var(--body)}
+.opt label span{font-size:13px;color:var(--muted);line-height:1.35}
+.opt label:hover{border-color:var(--coolant);transform:translateY(-1px)}
+.opt input:checked+label{border-color:var(--copper);background:rgba(200,118,58,.12)}
+.opt input:focus-visible+label{outline:3px solid var(--coolant);outline-offset:2px}
+.opts.small{grid-template-columns:repeat(3,minmax(0,1fr))}
+.opts.small label{padding:12px;text-align:center}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fgrid .full{grid-column:1/-1}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field>label,.glabel{font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#c6cfd3}
+.field .opt-tag{color:var(--muted);font-weight:400;letter-spacing:.06em;text-transform:none}
+.field input,.field textarea,.field select{width:100%;background:#12171a;border:1px solid #36424a;border-radius:6px;color:var(--text);font:400 16px/1.4 var(--body);padding:13px 14px;transition:border-color .2s}
+.field textarea{min-height:110px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--coolant);box-shadow:0 0 0 3px rgba(129,185,196,.2)}
+.field input[aria-invalid="true"]{border-color:#e07a5f}
+.err{color:#f0a08a;font-size:13px;min-height:0;margin:0}
+.group{margin-top:20px;display:grid;gap:10px}
+.qnav{display:flex;justify-content:space-between;gap:12px;margin-top:26px;flex-wrap:wrap}
+.qnav .btn{cursor:pointer;border:0;font-family:var(--body)}
+.qnav .btn-ghost{border:1px solid #3a464e;background:transparent}
+.qnav .btn[disabled]{opacity:.5;cursor:progress}
+.review{display:grid;gap:1px;background:var(--fin);border:1px solid var(--fin);border-radius:6px;overflow:hidden}
+.review div{display:grid;grid-template-columns:8em minmax(0,1fr) auto;gap:12px;align-items:baseline;background:#12171a;padding:12px 14px}
+.review dt{font:600 11px/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--copper)}
+.review dd{margin:0;font-size:15px;overflow-wrap:anywhere}
+.review button{background:none;border:0;color:var(--coolant);font:600 13px/1 var(--body);cursor:pointer;padding:4px}
+.done{text-align:left}
+.done .tick{width:64px;height:64px;border-radius:50%;background:rgba(124,207,142,.14);display:grid;place-items:center;margin-bottom:18px}
+.done .tick svg{width:30px;height:30px}
+.sendnote{font-size:13px;color:var(--muted);margin:14px 0 0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media (max-width:900px){.qwrap{grid-template-columns:1fr}}
+@media (max-width:520px){.opts,.fgrid{grid-template-columns:1fr}.opts.small{grid-template-columns:1fr 1fr 1fr}.review div{grid-template-columns:1fr auto}.review dt{grid-column:1/-1}}
+
+/* Reviews */
+.quotes{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:24px}
+.quote{background:var(--iron-2);border:1px solid var(--fin);padding:32px;display:flex;flex-direction:column;gap:24px;margin:0;border-radius:4px}
+.quote blockquote{margin:0;font-size:18px;line-height:1.55;color:#dfe5e8}
+.quote:first-child blockquote{font:700 clamp(26px,2.6vw,34px)/1.15 var(--display);letter-spacing:.01em;text-transform:none;color:var(--text)}
+.quote figcaption{margin-top:auto;display:flex;justify-content:space-between;gap:12px;font:400 13px/1.4 var(--mono);color:var(--muted);border-top:1px dashed #36424a;padding-top:16px}
+.quote figcaption b{color:var(--text);font-weight:600}
+.stars{color:var(--copper);letter-spacing:2px}
+.qmark{font:900 80px/0.6 var(--display);color:var(--copper);height:34px}
+@media (max-width:960px){.quotes{grid-template-columns:1fr}}
+
+/* Hours + location */
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.panel{border:1px solid var(--fin);background:var(--iron-2);border-radius:4px;padding:clamp(24px,4vw,40px);min-width:0}
+.panel h3{font-size:40px;font-weight:800;text-transform:uppercase;margin:12px 0 24px}
+.hours{width:100%;border-collapse:collapse;font:400 15px/1 var(--mono);font-variant-numeric:tabular-nums}
+.hours td{padding:13px 0;border-bottom:1px solid var(--fin)}
+.hours td:last-child{text-align:right;color:#c6cfd3}
+.hours tr.today td{color:var(--copper-hi)}
+.hours tr.today td:first-child::after{content:" · today";color:var(--muted);font-size:12px}
+.hours tr.closed td:last-child{color:var(--muted)}
+.mapcard{display:block;text-decoration:none;position:relative;aspect-ratio:16/9;max-width:100%;border-radius:4px;overflow:hidden;border:1px solid var(--fin);margin-bottom:20px;background:#182025}
+.mapcard svg{width:100%;height:100%;display:block}
+.mapcard .go{position:absolute;right:12px;bottom:12px;background:var(--copper);color:#1a0f07;font:600 13px/1 var(--body);padding:10px 12px;border-radius:4px}
+.addr{font:600 22px/1.3 var(--body);margin:0 0 6px}
+.addr a{text-decoration:none}
+.addr a:hover{color:var(--copper-hi)}
+.sub{color:var(--muted);font-size:15px;margin:0 0 22px}
+@media (max-width:860px){.visit{grid-template-columns:1fr}}
+
+/* Footer — bottom tank */
+footer{border-top:6px solid var(--copper);background:#0f1316;padding-block:56px 40px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+.foot h4{font:600 11px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin:0 0 14px}
+.foot p,.foot li{margin:0;color:#c6cfd3;font-size:15px}
+.foot ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.foot .big{font:800 clamp(34px,4vw,52px)/1 var(--display);text-decoration:none;display:inline-block;margin-top:4px}
+.foot .big:hover{color:var(--copper-hi)}
+.copyline{margin-top:48px;padding-top:20px;border-top:1px solid var(--fin);font:400 12px/1.5 var(--mono);color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:760px){.foot{grid-template-columns:1fr}}
+
+/* Mobile call bar */
+.callbar{display:none}
+@media (max-width:640px){
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--iron) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--fin)}
+  .callbar .btn{justify-content:center;padding:13px 10px}
+  footer{padding-bottom:110px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .layer,.p,.finband{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Bundoora Radiator Service, back to top">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="12" fill="#1c2328"/><rect x="10" y="10" width="44" height="8" rx="2" fill="#c8763a"/><rect x="10" y="46" width="44" height="8" rx="2" fill="#c8763a"/><g stroke="#81b9c4" stroke-width="3"><path d="M16 20v24M24 20v24M32 20v24M40 20v24M48 20v24"/></g></svg>
+      <span><b>Bundoora Radiator</b><small>Service · Heidelberg West</small></span>
+    </a>
+    <nav aria-label="Sections"><a href="#about">About</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#visit">Hours &amp; location</a></nav>
+    <div class="navcta"><a class="btn btn-quote" href="#quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Get a quote</a><a class="btn btn-copper" href="tel:+61394593447"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>(03) 9459 3447</a></div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-labelledby="h1">
+  <div class="layer l-back" data-depth="0.45" aria-hidden="true"><canvas id="core"></canvas></div>
+  <div class="layer l-mid" data-depth="0.22" aria-hidden="true">
+    <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="cu" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e59a5c"/><stop offset=".5" stop-color="#b8632a"/><stop offset="1" stop-color="#6e3714"/></linearGradient>
+        <linearGradient id="hose" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b0e10"/><stop offset=".5" stop-color="#2b3339"/><stop offset="1" stop-color="#0b0e10"/></linearGradient>
+      </defs>
+      <!-- upper header tank -->
+      <g transform="translate(880 230) rotate(-8)">
+        <rect x="0" y="0" width="820" height="86" rx="14" fill="url(#cu)"/>
+        <rect x="0" y="70" width="820" height="16" fill="#5a2c10" opacity=".7"/>
+        <g fill="#f3b57f" opacity=".55"><circle cx="40" cy="22" r="6"/><circle cx="780" cy="22" r="6"/></g>
+        <!-- filler neck -->
+        <rect x="120" y="-50" width="70" height="56" rx="6" fill="url(#cu)"/>
+        <rect x="104" y="-66" width="102" height="24" rx="8" fill="#d0d6d9"/>
+        <rect x="104" y="-66" width="102" height="8" rx="4" fill="#ffffff" opacity=".5"/>
+        <!-- inlet pipe + hose -->
+        <rect x="640" y="-70" width="56" height="80" rx="6" fill="url(#cu)"/>
+        <path d="M668 -60 C 668 -220, 520 -260, 420 -330" stroke="url(#hose)" stroke-width="64" fill="none" stroke-linecap="round"/>
+        <rect x="636" y="-80" width="64" height="20" rx="4" fill="#9aa4aa"/>
+      </g>
+    </svg>
+  </div>
+  <div class="layer l-front" data-depth="0.08" aria-hidden="true"><canvas id="drops"></canvas></div>
+
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow rise">Radiators · Heater cores · Cooling systems</p>
+      <h1 id="h1" class="rise d1">Bundoora <span class="c">Radiator</span><span class="s">Service</span></h1>
+      <p class="lede rise d2">A specialist radiator workshop in Heidelberg West. Repairs, replacements and custom radiators for daily drivers, fleets, classics and engine swaps, with straight advice before any work starts.</p>
+      <div class="cta rise d3">
+        <a class="btn btn-copper" href="tel:+61394593447"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Call (03) 9459 3447</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=9+Beatrice+Ave%2C+Heidelberg+West+VIC+3081%2C+Australia" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Get directions</a>
+        <a class="btn btn-quote" href="#quote"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Get a quick quote</a>
+      </div>
+      <div class="meta rise d4"><span class="status" id="status"><i class="dot"></i><span id="statusText">Mon–Fri 8:00–5:00 · Sat 8:30–12:00</span></span><span>9 Beatrice Ave, Heidelberg West</span></div>
+    </div>
+    <div class="gauge rise d2" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <circle cx="150" cy="170" r="128" fill="#101417" stroke="#2a343b" stroke-width="2"/>
+        <path d="M 52 210 A 108 108 0 1 1 248 210" fill="none" stroke="#2a343b" stroke-width="16" stroke-linecap="round"/>
+        <path d="M 52 210 A 108 108 0 0 1 108 72" fill="none" stroke="#81b9c4" stroke-width="16" stroke-linecap="round" opacity=".85"/>
+        <path d="M 192 72 A 108 108 0 0 1 248 210" fill="none" stroke="#c8763a" stroke-width="16" stroke-linecap="round" opacity=".9"/>
+        <g stroke="#8b979e" stroke-width="2">
+          <path d="M150 74v16"/><path d="M86 100l10 11"/><path d="M214 100l-10 11"/>
+        </g>
+        <text x="40" y="244" fill="#81b9c4" font-family="JetBrains Mono,monospace" font-size="22" font-weight="600">C</text>
+        <text x="244" y="244" fill="#c8763a" font-family="JetBrains Mono,monospace" font-size="22" font-weight="600">H</text>
+        <g class="needle" id="needle"><path d="M150 170 L 146 168 L 150 76 L 154 168 Z" fill="#e9edef"/></g>
+        <circle cx="150" cy="170" r="12" fill="#c8763a"/><circle cx="150" cy="170" r="4" fill="#14191d"/>
+        <text x="150" y="226" text-anchor="middle" fill="#8b979e" font-family="JetBrains Mono,monospace" font-size="11" letter-spacing="3">ENGINE TEMP</text>
+      </svg>
+      <div class="gauge-cap">Scroll to cool down</div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  <span>Radiator repairs</span><span>Radiator replacements</span><span>Heater cores</span><span>Custom &amp; modified radiators</span><span>Aftermarket radiators</span><span>Transmission cooler hoses</span><span>Older &amp; classic vehicles</span><span>Fleet cooling systems</span>
+  <span>Radiator repairs</span><span>Radiator replacements</span><span>Heater cores</span><span>Custom &amp; modified radiators</span><span>Aftermarket radiators</span><span>Transmission cooler hoses</span><span>Older &amp; classic vehicles</span><span>Fleet cooling systems</span>
+</div></div>
+
+<section id="about" class="sec">
+  <div class="wrap about">
+    <div class="about-art" aria-hidden="true">
+      <div class="p" data-depth="-0.05">
+        <svg viewBox="0 0 400 560" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagram of a car cooling loop: hot coolant leaves the engine through the thermostat and upper hose, cools as it runs down the radiator core, and returns through the lower hose to the water pump. A branch feeds the heater core.">
+          <defs>
+            <linearGradient id="therm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8763a"/><stop offset=".55" stop-color="#6d7f86"/><stop offset="1" stop-color="#81b9c4"/></linearGradient>
+            <linearGradient id="cu3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e59a5c"/><stop offset="1" stop-color="#7a3d16"/></linearGradient>
+            <pattern id="finz" width="10" height="8" patternUnits="userSpaceOnUse"><path d="M0 4 L2.5 0 L5 4 L7.5 8 L10 4" fill="none" stroke="#14191d" stroke-width=".9" opacity=".55"/></pattern>
+          </defs>
+          <rect width="400" height="560" fill="#1c2328"/>
+          <g stroke="#232c32"><path d="M0 70H400M0 140H400M0 210H400M0 280H400M0 350H400M0 420H400M0 490H400M80 0V560M160 0V560M240 0V560M320 0V560"/></g>
+          <text x="24" y="52" class="dg-t">THE COOLING LOOP</text>
+          <text x="24" y="70" class="dg-s">Where your radiator fits in</text>
+
+          <!-- radiator -->
+          <rect x="232" y="122" width="136" height="280" fill="url(#therm)" opacity=".92"/>
+          <rect x="232" y="122" width="136" height="280" fill="url(#finz)"/>
+          <g fill="#14191d" opacity=".55"><rect x="252" y="122" width="3" height="280"/><rect x="276" y="122" width="3" height="280"/><rect x="300" y="122" width="3" height="280"/><rect x="324" y="122" width="3" height="280"/><rect x="348" y="122" width="3" height="280"/></g>
+          <g class="flow core" stroke="#e9edef" stroke-width="2" opacity=".7"><path d="M264 124V400"/><path d="M288 124V400"/><path d="M312 124V400"/><path d="M336 124V400"/></g>
+          <!-- fan, ghosted over the core -->
+          <g transform="translate(300 262)" opacity=".16" id="fanlayer"><g class="fan">
+            <circle r="62" fill="none" stroke="#3a464e" stroke-width="2" stroke-dasharray="3 6"/>
+            <path d="M0 0 C 18 -20, 46 -24, 56 -8 C 30 -4, 12 2, 0 0Z M0 0 C 20 18, 18 46, 2 56 C -2 30, -4 12, 0 0Z M0 0 C -18 20, -46 24, -56 8 C -30 4, -12 -2, 0 0Z M0 0 C -20 -18, -18 -46, -2 -56 C 2 -30, 4 -12, 0 0Z" fill="#e9edef"/>
+            <circle r="9" fill="#55636b"/></g></g>
+
+          <text x="300" y="338" text-anchor="middle" class="dg-l" fill-opacity=".9">FAN</text>
+          <rect x="224" y="96" width="152" height="28" rx="7" fill="url(#cu3)"/>
+          <rect x="224" y="400" width="152" height="28" rx="7" fill="url(#cu3)"/>
+          <rect x="318" y="74" width="26" height="24" rx="3" fill="url(#cu3)"/><rect x="312" y="66" width="38" height="11" rx="4" fill="#c9cfd2"/>
+
+          <!-- engine block -->
+          <rect x="28" y="196" width="128" height="190" rx="10" fill="#2a343b" stroke="#3a464e" stroke-width="2"/>
+          <g fill="#1c2328" stroke="#3a464e"><circle cx="62" cy="240" r="18"/><circle cx="122" cy="240" r="18"/><circle cx="62" cy="300" r="18"/><circle cx="122" cy="300" r="18"/></g>
+          <g fill="#c8763a" opacity=".25" class="glow"><circle cx="62" cy="240" r="12"/><circle cx="122" cy="240" r="12"/><circle cx="62" cy="300" r="12"/><circle cx="122" cy="300" r="12"/></g>
+          <text x="92" y="364" text-anchor="middle" class="dg-l">ENGINE</text>
+          <!-- thermostat -->
+          <rect x="120" y="176" width="34" height="24" rx="5" fill="#55636b"/>
+          <!-- water pump -->
+          <circle cx="146" cy="372" r="15" fill="#55636b"/><circle cx="146" cy="372" r="5" fill="#1c2328"/>
+
+          <!-- hoses -->
+          <path d="M150 182 C 196 150, 190 108, 226 108" fill="none" stroke="#0e1214" stroke-width="16" stroke-linecap="round"/>
+          <path class="flow hot" d="M150 182 C 196 150, 190 108, 226 108" fill="none" stroke="#e59a5c" stroke-width="4" stroke-linecap="round"/>
+          <path d="M228 414 C 196 414, 196 386, 160 374" fill="none" stroke="#0e1214" stroke-width="16" stroke-linecap="round"/>
+          <path class="flow cold" d="M228 414 C 196 414, 196 386, 160 374" fill="none" stroke="#81b9c4" stroke-width="4" stroke-linecap="round"/>
+          <!-- heater core branch -->
+          <path d="M60 386 C 60 430, 60 452, 84 466 M120 386 C 120 440, 140 452, 126 466" fill="none" stroke="#0e1214" stroke-width="10" stroke-linecap="round"/>
+          <path class="flow hot" d="M60 386 C 60 430, 60 452, 84 466" fill="none" stroke="#e59a5c" stroke-width="3"/>
+          <path class="flow cold" d="M126 466 C 140 452, 120 440, 120 386" fill="none" stroke="#81b9c4" stroke-width="3"/>
+          <rect x="78" y="460" width="54" height="40" rx="4" fill="#c8763a" opacity=".85"/>
+          <rect x="78" y="460" width="54" height="40" rx="4" fill="url(#finz)"/>
+
+          <!-- callouts -->
+          <g class="dg-l">
+            <text x="128" y="164">THERMOSTAT</text>
+            <text x="172" y="88">UPPER HOSE</text>
+            <text x="300" y="470" text-anchor="middle">RADIATOR CORE</text>
+            <text x="150" y="448">LOWER HOSE</text>
+            <text x="164" y="336">WATER</text><text x="164" y="349">PUMP</text>
+            <text x="144" y="488">HEATER CORE</text>
+            
+          </g>
+          <g class="dg-s"><circle cx="30" cy="526" r="5" fill="#e59a5c"/><text x="42" y="530">hot from the engine</text><circle cx="196" cy="526" r="5" fill="#81b9c4"/><text x="208" y="530">cooled by the core</text></g>
+        </svg>
+      </div>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">About the workshop</p>
+      <h2>Ask Dom. He'll tell you what it needs.</h2>
+      <p>Bundoora Radiator Service is an owner-run cooling workshop on Beatrice Avenue in Heidelberg West. Dom and the crew look after radiators, heater cores and the hoses and pumps around them.</p>
+      <p>Customers come back for the same reasons: the work is explained in plain terms, options are laid out before anything is replaced, and the car is checked over properly while it's in. Older vehicles, classics and engine conversions are welcome.</p>
+      <dl class="facts">
+        <div><dt>Specialty</dt><dd>Automotive cooling systems</dd></div>
+        <div><dt>Located</dt><dd>Heidelberg West VIC 3081</dd></div>
+        <div><dt>Access</dt><dd>Wheelchair-accessible entrance &amp; parking</dd></div>
+        <div><dt>Payment</dt><dd>Credit, debit &amp; tap-to-pay</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="sec services">
+  <svg class="finband" data-depth="0.1" viewBox="0 0 400 800" preserveAspectRatio="none" aria-hidden="true">
+    <defs><pattern id="fins" width="14" height="10" patternUnits="userSpaceOnUse"><path d="M0 5 L3.5 0 L7 5 L10.5 10 L14 5" fill="none" stroke="#c9bfae" stroke-width="1.2"/></pattern></defs>
+    <rect width="400" height="800" fill="url(#fins)"/>
+  </svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">What we work on</p><h2>Cooling, start to finish</h2></div>
+      <p>Bring the car in, or call first and describe the symptoms. If it's not safe to drive, ask about getting it towed straight to the workshop.</p>
+    </div>
+    <div class="svc">
+      <article><span class="code">RAD / REPAIR</span><h3>Radiator repairs</h3><p>Leaks, splits and blocked cores diagnosed, with the options explained before work begins.</p></article>
+      <article><span class="code">RAD / REPLACE</span><h3>Radiator replacement</h3><p>Quality aftermarket radiators sourced to suit the vehicle, supplied fitted or for you to fit with guidance.</p></article>
+      <article><span class="code">HTR / CORE</span><h3>Heater cores</h3><p>Heater core replacement when the cabin heat fails or coolant goes missing inside the car.</p></article>
+      <article><span class="code">CUSTOM / MOD</span><h3>Custom &amp; modified</h3><p>Original radiators adapted for engine swaps and conversions, including changes to inlets, outlets and header tanks.</p></article>
+      <article><span class="code">HOSE / TRANS</span><h3>Hoses &amp; coolers</h3><p>Leaking radiator and transmission cooler hoses replaced, plus pumps and related parts found during inspection.</p></article>
+      <article><span class="code">FLEET / CLASSIC</span><h3>Fleets &amp; older cars</h3><p>Ongoing cooling-system work for business fleets, and care for early-model and classic vehicles.</p></article>
+    </div>
+    <div class="makes" aria-label="Vehicles customers mention"><b>As seen in the reviews</b><span>Ford Cortina · Barra swap</span><span>Toyota Crown JZS171</span><span>Nissan Pathfinder</span><span>Early-model Mercedes</span></div>
+  </div>
+</section>
+
+<section id="quote" class="sec quote-sec" aria-labelledby="qh">
+  <div class="wrap qwrap">
+    <div class="qintro">
+      <p class="eyebrow">Get a quote</p>
+      <h2 id="qh">Can't call right now?</h2>
+      <p>Tell us what's wrong and what you drive. It goes straight to the workshop, and they'll call, text or email you back with a quote.</p>
+    </div>
+
+    <div class="qcard">
+      <div class="qtank" aria-hidden="true"><div class="qfill" id="qfill"></div></div>
+      <div class="qhead"><span class="stepname" id="qname">What's wrong</span><span id="qcount">Step 1 of 4</span></div>
+      <form class="qbody" id="qform" novalidate>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div id="qlive" class="hp" aria-live="polite"></div>
+
+        <fieldset class="qstep on" data-step="1" data-name="What's wrong">
+          <legend>What's going on?</legend>
+          <p class="hint">Pick the closest one. Not sure is fine too.</p>
+          <div class="opts" role="radiogroup">
+            <div class="opt"><input type="radio" name="problem" id="p1" value="Radiator leaking"><label for="p1"><b>Radiator leaking</b><span>Puddles, drips or a split tank</span></label></div>
+            <div class="opt"><input type="radio" name="problem" id="p2" value="Overheating"><label for="p2"><b>Overheating</b><span>Gauge climbing or steam</span></label></div>
+            <div class="opt"><input type="radio" name="problem" id="p3" value="Radiator replacement"><label for="p3"><b>New radiator</b><span>Replace the old one</span></label></div>
+            <div class="opt"><input type="radio" name="problem" id="p4" value="Heater core / no cabin heat"><label for="p4"><b>No heat inside</b><span>Heater core trouble</span></label></div>
+            <div class="opt"><input type="radio" name="problem" id="p5" value="Hose or coolant leak"><label for="p5"><b>Hose or coolant leak</b><span>Including trans cooler hoses</span></label></div>
+            <div class="opt"><input type="radio" name="problem" id="p6" value="Custom / modified radiator"><label for="p6"><b>Custom or modified</b><span>Engine swap or conversion</span></label></div>
+            <div class="opt" style="grid-column:1/-1"><input type="radio" name="problem" id="p7" value="Not sure"><label for="p7"><b>Not sure</b><span>Describe it on the next steps</span></label></div>
+          </div>
+          <p class="err" id="e1"></p>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="2" data-name="Your car">
+          <legend>What do you drive?</legend>
+          <p class="hint">Make and model is enough. Year helps us find the right radiator.</p>
+          <div class="fgrid">
+            <div class="field"><label for="make">Make</label><input id="make" name="make" list="makes" autocomplete="off" placeholder="e.g. Toyota" required></div>
+            <div class="field"><label for="model">Model</label><input id="model" name="model" autocomplete="off" placeholder="e.g. Hilux" required></div>
+            <div class="field"><label for="year">Year <span class="opt-tag">(optional)</span></label><input id="year" name="year" inputmode="numeric" maxlength="4" placeholder="e.g. 2012"></div>
+            <div class="field"><label for="engine">Engine or rego <span class="opt-tag">(optional)</span></label><input id="engine" name="engine" placeholder="e.g. 3.0 diesel, auto"></div>
+          </div>
+          <datalist id="makes"><option>Toyota</option><option>Ford</option><option>Holden</option><option>Mazda</option><option>Hyundai</option><option>Mitsubishi</option><option>Nissan</option><option>Kia</option><option>Volkswagen</option><option>Subaru</option><option>Honda</option><option>Isuzu</option><option>Mercedes-Benz</option><option>BMW</option><option>Audi</option><option>Suzuki</option><option>Jeep</option><option>Land Rover</option><option>Lexus</option><option>Volvo</option></datalist>
+          <p class="err" id="e2"></p>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="3" data-name="Details">
+          <legend>A few details</legend>
+          <p class="hint">All optional, but it helps us quote accurately.</p>
+          <span class="glabel">Can the car be driven?</span>
+          <div class="opts small" style="margin-top:10px">
+            <div class="opt"><input type="radio" name="drivable" id="d1" value="Yes"><label for="d1"><b>Yes</b></label></div>
+            <div class="opt"><input type="radio" name="drivable" id="d2" value="No, needs a tow"><label for="d2"><b>Needs tow</b></label></div>
+            <div class="opt"><input type="radio" name="drivable" id="d3" value="Not sure"><label for="d3"><b>Not sure</b></label></div>
+          </div>
+          <div class="group">
+            <span class="glabel">How soon?</span>
+            <div class="opts small">
+              <div class="opt"><input type="radio" name="timing" id="t1" value="As soon as possible"><label for="t1"><b>ASAP</b></label></div>
+              <div class="opt"><input type="radio" name="timing" id="t2" value="Within the week"><label for="t2"><b>This week</b></label></div>
+              <div class="opt"><input type="radio" name="timing" id="t3" value="Just pricing"><label for="t3"><b>Just a price</b></label></div>
+            </div>
+          </div>
+          <div class="field group"><label for="notes">Anything else? <span class="opt-tag">(optional)</span></label><textarea id="notes" name="notes" placeholder="What you've noticed, when it started, any work done already"></textarea></div>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="4" data-name="Contact">
+          <legend>Where do we reply?</legend>
+          <p class="hint">Only used to get back to you about this quote.</p>
+          <div class="fgrid">
+            <div class="field full"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="phone">Mobile</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="04xx xxx xxx" required></div>
+            <div class="field"><label for="email">Email <span class="opt-tag">(optional)</span></label><input id="email" name="email" type="email" autocomplete="email"></div>
+          </div>
+          <div class="group">
+            <span class="glabel">Best way to reach you</span>
+            <div class="opts small">
+              <div class="opt"><input type="radio" name="contact" id="c1" value="Phone call" checked><label for="c1"><b>Call</b></label></div>
+              <div class="opt"><input type="radio" name="contact" id="c2" value="Text message"><label for="c2"><b>Text</b></label></div>
+              <div class="opt"><input type="radio" name="contact" id="c3" value="Email"><label for="c3"><b>Email</b></label></div>
+            </div>
+          </div>
+          <p class="err" id="e4"></p>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="5" data-name="Check & send">
+          <legend>Check &amp; send</legend>
+          <p class="hint">Tap edit to change anything.</p>
+          <dl class="review" id="qreview"></dl>
+          <p class="err" id="e5"></p>
+        </fieldset>
+
+        <div class="qstep done" data-step="6" data-name="Sent" tabindex="-1" id="qdone">
+          <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="#7ccf8e" stroke-width="2.5"><path d="M4 12.5l5 5L20 6.5"/></svg></div>
+          <h3 style="font-size:36px;text-transform:uppercase;margin-bottom:12px">Request sent</h3>
+          <p style="color:#c6cfd3;margin:0 0 8px">Thanks <span id="qfirst"></span>. The workshop has your details and will get back to you by <span id="qhow">phone</span>.</p>
+          <p style="color:var(--muted);margin:0 0 22px">Open Mon–Fri 8:00–5:00 and Sat 8:30–12:00. Requests sent after hours are seen when the workshop opens.</p>
+          <div class="cta"><a class="btn btn-ghost" href="tel:+61394593447">Call (03) 9459 3447</a><button type="button" class="btn btn-ghost" id="qagain" style="background:transparent;cursor:pointer;font-family:var(--body)">Start another</button></div>
+        </div>
+
+        <div class="qnav" id="qnav">
+          <button type="button" class="btn btn-ghost" id="qback">← Back</button>
+          <button type="button" class="btn btn-copper" id="qnext">Next →</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">From Google reviews</p><h2>In their words</h2></div>
+      <p>Quoted exactly as customers wrote them.</p>
+    </div>
+    <div class="quotes">
+      <figure class="quote">
+        <div class="qmark" aria-hidden="true">“</div>
+        <blockquote>Great price and service every single time. Dom has always been very knowlegeable and attentive for years that I've been going there. Always happy to refer everyone. Great business to go to when you need radiators or heater cores.</blockquote>
+        <figcaption><b>John Tiliacos</b><span>Google review</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="qmark" aria-hidden="true">“</div>
+        <blockquote>Dom was able to help me out with getting a replacement radiator for my JZS171 Crown. He had a Koyorad on hand which was a better option than the other aftermarket brands that were available and suited this car. Very reasonable price too. Thank you very much Dom!</blockquote>
+        <figcaption><b>Nick Aldridge</b><span>Google review</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="qmark" aria-hidden="true">“</div>
+        <blockquote>Professional service! Rang up and was told they could help me that day. Being female I am scared of being ripped off but the owner (i think!) explained everything so I could understand and costs were very reasonable. Would highly recommend the service to anyone.</blockquote>
+        <figcaption><b>Michelle Melbourne</b><span>Google review</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="sec" style="padding-top:0">
+  <div class="wrap visit">
+    <div class="panel">
+      <p class="eyebrow">Opening hours</p>
+      <h3>When we're in</h3>
+      <table class="hours" id="hours">
+        <tbody>
+        <tr data-d="1"><td>Monday</td><td>8:00 am – 5:00 pm</td></tr>
+        <tr data-d="2"><td>Tuesday</td><td>8:00 am – 5:00 pm</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>8:00 am – 5:00 pm</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>8:00 am – 5:00 pm</td></tr>
+        <tr data-d="5"><td>Friday</td><td>8:00 am – 5:00 pm</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>8:30 am – 12:00 pm</td></tr>
+        <tr data-d="0" class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">Find the workshop</p>
+      <h3>Location</h3>
+      <a class="mapcard" href="https://www.google.com/maps/dir/?api=1&amp;destination=9+Beatrice+Ave%2C+Heidelberg+West+VIC+3081%2C+Australia" target="_blank" rel="noopener" aria-label="Open directions to 9 Beatrice Ave, Heidelberg West in Google Maps">
+        <svg viewBox="0 0 640 360" aria-hidden="true">
+          <rect width="640" height="360" fill="#182025"/>
+          <g stroke="#232d33" stroke-width="1">
+            <path d="M0 40H640M0 80H640M0 120H640M0 160H640M0 200H640M0 240H640M0 280H640M0 320H640"/>
+            <path d="M40 0V360M80 0V360M120 0V360M160 0V360M200 0V360M240 0V360M280 0V360M320 0V360M360 0V360M400 0V360M440 0V360M480 0V360M520 0V360M560 0V360M600 0V360"/>
+          </g>
+          <path d="M-20 250 C 140 230, 260 200, 660 120" stroke="#2f3a41" stroke-width="22" fill="none"/>
+          <path d="M260 -10 L 330 380" stroke="#2f3a41" stroke-width="14" fill="none"/>
+          <path d="M120 380 C 200 260, 380 230, 560 -10" stroke="#2a343b" stroke-width="10" fill="none"/>
+          <path d="M318 180 L 470 160" stroke="#c8763a" stroke-width="6" stroke-linecap="round" fill="none" stroke-dasharray="2 12"/>
+          <g transform="translate(470 160)"><circle r="26" fill="#c8763a" opacity=".18"/><circle r="10" fill="#c8763a"/><circle r="4" fill="#14191d"/></g>
+          <text x="488" y="146" fill="#e9edef" font-family="JetBrains Mono,monospace" font-size="13" font-weight="600">9 BEATRICE AVE</text>
+        </svg>
+        <span class="go">Open in Google Maps →</span>
+      </a>
+      <p class="addr"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=9+Beatrice+Ave%2C+Heidelberg+West+VIC+3081%2C+Australia" target="_blank" rel="noopener">9 Beatrice Ave, Heidelberg West VIC 3081</a></p>
+      <p class="sub">Wheelchair-accessible entrance and car park.</p>
+      <div class="cta">
+        <a class="btn btn-copper" href="https://www.google.com/maps/dir/?api=1&amp;destination=9+Beatrice+Ave%2C+Heidelberg+West+VIC+3081%2C+Australia" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn-ghost" href="tel:+61394593447">Call (03) 9459 3447</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Call the workshop</h4>
+        <a class="big" href="tel:+61394593447">(03) 9459 3447</a>
+        <p style="margin-top:12px;color:var(--muted)">Bundoora Radiator Service · radiators, heater cores &amp; cooling systems.</p>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=9+Beatrice+Ave%2C+Heidelberg+West+VIC+3081%2C+Australia" target="_blank" rel="noopener">9 Beatrice Ave<br>Heidelberg West VIC 3081</a></p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul><li>Mon–Fri 8:00 am – 5:00 pm</li><li>Sat 8:30 am – 12:00 pm</li><li>Sun Closed</li></ul>
+      </div>
+    </div>
+    <div class="copyline"><span>© Bundoora Radiator Service</span><span>Credit · Debit · Tap-to-pay accepted</span></div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-copper" href="tel:+61394593447">Call now</a>
+  <a class="btn btn-quote" href="#quote">Get a quote</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Open now (Melbourne time) ---------- */
+  try{
+    var parts = new Intl.DateTimeFormat('en-AU',{timeZone:'Australia/Melbourne',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var g = function(t){return (parts.find(function(p){return p.type===t})||{}).value};
+    var dmap={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    var d=dmap[g('weekday')], m=(+g('hour')%24)*60+(+g('minute'));
+    var sched={1:[480,1020],2:[480,1020],3:[480,1020],4:[480,1020],5:[480,1020],6:[510,720]};
+    var row=document.querySelector('#hours tr[data-d="'+d+'"]'); if(row) row.classList.add('today');
+    var s=sched[d], el=document.getElementById('status'), tx=document.getElementById('statusText');
+    if(s && m>=s[0] && m<s[1]){ el.classList.add('open'); tx.textContent='Open now · closes '+(d===6?'12:00 pm':'5:00 pm'); }
+    else { tx.textContent='Closed now · Mon–Fri 8–5, Sat 8:30–12'; }
+  }catch(e){}
+
+  /* ---------- Radiator core canvas (back layer) ---------- */
+  var core=document.getElementById('core'), ctx=core.getContext('2d');
+  var drops=document.getElementById('drops'), dctx=drops.getContext('2d');
+  var W,H,DPR=Math.min(window.devicePixelRatio||1,2), t0=performance.now();
+  function size(){
+    [core,drops].forEach(function(c){ var r=c.getBoundingClientRect(); c.width=Math.round(r.width*DPR); c.height=Math.round(r.height*DPR); });
+    W=core.width;H=core.height;
+  }
+  function drawCore(t){
+    ctx.clearRect(0,0,W,H);
+    var tubeGap=Math.round(46*DPR), finH=Math.round(7*DPR);
+    var shift=reduce?0:(t*0.012*DPR)%(finH*2);
+    // heat wash on the right, cool on the left
+    var gr=ctx.createLinearGradient(0,0,W,0);
+    gr.addColorStop(0,'rgba(129,185,196,0.10)');gr.addColorStop(.55,'rgba(42,52,59,0.0)');gr.addColorStop(1,'rgba(200,118,58,0.22)');
+    ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
+    // zigzag fins between tubes
+    ctx.lineWidth=1*DPR;
+    for(var x=0;x<W+tubeGap;x+=tubeGap){
+      ctx.strokeStyle='rgba(139,151,158,0.18)';
+      ctx.beginPath();
+      for(var y=-finH*2+shift;y<H+finH*2;y+=finH){
+        var odd=Math.round((y-shift)/finH)%2;
+        ctx.lineTo(x+(odd?6*DPR:tubeGap-6*DPR),y);
+      }
+      ctx.stroke();
+      // tube
+      var tg=ctx.createLinearGradient(x-5*DPR,0,x+5*DPR,0);
+      tg.addColorStop(0,'#1a2126');tg.addColorStop(.5,'#3a464e');tg.addColorStop(1,'#1a2126');
+      ctx.fillStyle=tg;ctx.fillRect(x-4*DPR,0,8*DPR,H);
+    }
+  }
+  /* coolant beads drifting down the tubes (front layer) */
+  var beads=[];
+  function seed(){ beads=[]; var n=Math.round(W/(46*DPR)); for(var i=0;i<n*1.2;i++){ beads.push({x:Math.floor(Math.random()*n)*46*DPR, y:Math.random()*H, v:(0.25+Math.random()*0.6)*DPR, r:(1.5+Math.random()*2.2)*DPR, hot:Math.random()<0.35}); } }
+  function drawBeads(){
+    dctx.clearRect(0,0,drops.width,drops.height);
+    for(var i=0;i<beads.length;i++){ var b=beads[i];
+      if(!reduce){ b.y+=b.v; if(b.y>drops.height+20){ b.y=-20; } }
+      var c=b.hot?'200,118,58':'129,185,196';
+      var g2=dctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r*5);
+      g2.addColorStop(0,'rgba('+c+',0.9)');g2.addColorStop(.25,'rgba('+c+',0.35)');g2.addColorStop(1,'rgba('+c+',0)');
+      dctx.fillStyle=g2;dctx.beginPath();dctx.arc(b.x,b.y,b.r*5,0,Math.PI*2);dctx.fill();
+    }
+  }
+  var heroVisible=true;
+  function frame(t){ if(heroVisible){ drawCore(t-t0); drawBeads(); } if(!reduce) requestAnimationFrame(frame); }
+  size();seed();
+  if(reduce){ drawCore(0); drawBeads(); } else requestAnimationFrame(frame);
+  var rt; window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){size();seed();if(reduce){drawCore(0);drawBeads();}},150)});
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(e){heroVisible=e[0].isIntersecting}).observe(document.querySelector('.hero')); }
+
+
+  /* ---------- Scroll parallax + gauge ---------- */
+  var layers=[].slice.call(document.querySelectorAll('[data-depth]'));
+  var needle=document.getElementById('needle');
+  var ticking=false;
+  function update(){
+    ticking=false;
+    var vh=window.innerHeight, sy=window.scrollY;
+    if(!reduce){
+      layers.forEach(function(el){
+        var depth=parseFloat(el.dataset.depth), host=el.closest('section')||el.parentNode, r=host.getBoundingClientRect();
+        if(r.bottom<-200||r.top>vh+200) return;
+        var off=(r.top+r.height/2-vh/2);
+        el.style.transform='translate3d(0,'+(-off*depth).toFixed(1)+'px,0)';
+      });
+    }
+    var max=document.documentElement.scrollHeight-vh, p=max>0?Math.min(sy/max,1):0;
+    // needle: starts running hot (+62deg), cools to mid (0deg) by the end
+    var ang=62-62*Math.min(p*2.2,1);
+    if(needle) needle.style.transform='rotate('+ang.toFixed(1)+'deg)';
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  update();
+})();
+</script>
+<script>
+/* ===== Quote form =====
+   SET THE OWNER'S EMAIL BELOW. Quotes are delivered by FormSubmit (formsubmit.co).
+   The first quote sent triggers a one-time "Activate form" email to that address;
+   the owner clicks it once and every quote after that lands in their inbox. */
+var QUOTE_EMAIL = "";   // e.g. "dom@example.com"
+(function(){
+  var form=document.getElementById('qform'); if(!form) return;
+  var steps=[].slice.call(form.querySelectorAll('.qstep')), cur=1, TOTAL=4;
+  var back=document.getElementById('qback'), next=document.getElementById('qnext'), nav=document.getElementById('qnav');
+  var KEY='brs-quote-draft';
+  function val(n){var el=form.elements[n]; if(!el) return ''; if(el.length!==undefined && !el.tagName){ for(var i=0;i<el.length;i++) if(el[i].checked) return el[i].value; return ''; } return (el.value||'').trim();}
+  function save(){ try{ var d={}; ['problem','make','model','year','engine','drivable','timing','notes','name','phone','email','contact'].forEach(function(k){d[k]=val(k)}); localStorage.setItem(KEY,JSON.stringify(d)); }catch(e){} }
+  function load(){ try{ var d=JSON.parse(localStorage.getItem(KEY)||'{}'); Object.keys(d).forEach(function(k){ var el=form.elements[k]; if(!el||!d[k]) return; if(el.length!==undefined && !el.tagName){ for(var i=0;i<el.length;i++) el[i].checked=(el[i].value===d[k]); } else el.value=d[k]; }); }catch(e){} }
+  function show(n, focus){
+    cur=n;
+    steps.forEach(function(s){ s.classList.toggle('on', +s.dataset.step===n); });
+    var s=steps.filter(function(x){return +x.dataset.step===n})[0];
+    document.getElementById('qname').textContent=s.dataset.name;
+    document.getElementById('qcount').textContent = n<=TOTAL ? 'Step '+n+' of '+TOTAL : (n===5?'Review':'Done');
+    document.getElementById('qfill').style.width = Math.min(n,5)/5*100+'%';
+    back.style.visibility = (n===1)?'hidden':'visible';
+    next.textContent = n===5 ? 'Send quote request' : 'Next →';
+    nav.hidden = (n===6);
+    if(n===5) buildReview();
+    document.getElementById('qlive').textContent = s.dataset.name;
+    if(focus){ var f = s.querySelector('legend') ? s.querySelector('input:not([type=radio]),textarea') || s.querySelector('input:checked') || s.querySelector('input') : s; if(f && f.focus) f.focus({preventScroll:true}); var top=document.getElementById('quote').getBoundingClientRect().top; if(top<0||top>window.innerHeight*0.5) document.querySelector('.qcard').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'}); }
+  }
+  function err(id,msg){ var e=document.getElementById(id); if(e) e.textContent=msg||''; }
+  function validate(n){
+    if(n===1){ if(!val('problem')){ err('e1','Pick one option to continue.'); return false;} err('e1'); }
+    if(n===2){ var ok=true; ['make','model'].forEach(function(k){ var el=form.elements[k]; var bad=!el.value.trim(); el.setAttribute('aria-invalid',bad); if(bad) ok=false; }); err('e2', ok?'':'Add the make and model so we can look up the right parts.'); if(!ok){ form.elements[!val('make')?'make':'model'].focus(); } return ok; }
+    if(n===4){
+      var nm=val('name'), ph=val('phone').replace(/[^\d+]/g,''), em=val('email'), how=val('contact'), msg='';
+      form.elements.name.setAttribute('aria-invalid',!nm); form.elements.phone.setAttribute('aria-invalid',ph.length<8);
+      if(!nm) msg='Add your name.'; else if(ph.length<8) msg='Add a phone number so the workshop can reach you.';
+      else if(em && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) msg='That email looks incomplete.';
+      else if(how==='Email' && !em) msg='Add an email address, or choose call or text.';
+      err('e4',msg); return !msg;
+    }
+    return true;
+  }
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function buildReview(){
+    var car=[val('year'),val('make'),val('model')].filter(Boolean).join(' ')+(val('engine')?' · '+val('engine'):'');
+    var rows=[['Problem',val('problem'),1],['Car',car,2],['Drivable',val('drivable')||'—',3],['Timing',val('timing')||'—',3],['Notes',val('notes')||'—',3],['Name',val('name'),4],['Phone',val('phone'),4],['Email',val('email')||'—',4],['Reply by',val('contact'),4]];
+    document.getElementById('qreview').innerHTML=rows.map(function(r){return '<div><dt>'+r[0]+'</dt><dd>'+esc(r[1])+'</dd><button type="button" data-go="'+r[2]+'">Edit</button></div>'}).join('');
+  }
+  document.getElementById('qreview').addEventListener('click',function(e){ var b=e.target.closest('[data-go]'); if(b) show(+b.dataset.go,true); });
+  // auto-advance on step 1 choice
+  form.querySelectorAll('input[name=problem]').forEach(function(r){ r.addEventListener('change',function(){ err('e1'); save(); setTimeout(function(){ if(cur===1) show(2,true); },260); }); });
+  form.addEventListener('input',save); form.addEventListener('change',save);
+  form.addEventListener('keydown',function(e){ if(e.key==='Enter' && e.target.tagName==='INPUT'){ e.preventDefault(); next.click(); } });
+  back.addEventListener('click',function(){ if(cur>1) show(cur-1,true); });
+  next.addEventListener('click',function(){ if(cur<5){ if(validate(cur)) show(cur+1,true); } else send(); });
+  form.addEventListener('submit',function(e){ e.preventDefault(); });
+  document.getElementById('qagain').addEventListener('click',function(){ form.reset(); try{localStorage.removeItem(KEY)}catch(e){} show(1,true); });
+
+  function send(){
+    if(val('_honey')) return;
+    if(!QUOTE_EMAIL){ err('e5','Online quotes aren\'t switched on yet. Please call (03) 9459 3447.'); return; }
+    next.disabled=true; next.textContent='Sending…'; err('e5');
+    var car=[val('year'),val('make'),val('model')].filter(Boolean).join(' ');
+    var payload={
+      _subject:'Quote request: '+car+' · '+val('problem'),
+      _template:'table', _captcha:'false', _replyto: val('email')||undefined,
+      'Problem':val('problem'),'Car':car,'Engine / rego':val('engine')||'-','Drivable':val('drivable')||'-','How soon':val('timing')||'-','Notes':val('notes')||'-',
+      'Name':val('name'),'Phone':val('phone'),'Email':val('email')||'-','Reply by':val('contact')
+    };
+    fetch('https://formsubmit.co/ajax/'+encodeURIComponent(QUOTE_EMAIL),{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ return r.json().then(function(j){ if(!r.ok || String(j.success)==='false') throw new Error(j.message||'failed'); }); })
+      .then(function(){
+        document.getElementById('qfirst').textContent=val('name').split(' ')[0];
+        document.getElementById('qhow').textContent={'Phone call':'phone','Text message':'text','Email':'email'}[val('contact')]||'phone';
+        try{localStorage.removeItem(KEY)}catch(e){}
+        show(6,false); document.getElementById('qdone').focus({preventScroll:true});
+      })
+      .catch(function(){ err('e5','That didn\'t send. Check your connection and try again, or call (03) 9459 3447.'); })
+      .finally(function(){ next.disabled=false; if(cur===5) next.textContent='Send quote request'; });
+  }
+  load(); show(1,false);
+})();
+</script>
+
+</body>
+</html>
